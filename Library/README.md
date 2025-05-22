@@ -18,7 +18,7 @@ A clean, extensible, and modular **Python-based Library Management System** desi
 ## 📦 Project Structure
 
 ```bash
-library-management/
+Library/
 │
 ├── library.py        # Core application logic
 ├── book.csv          # Book inventory database
