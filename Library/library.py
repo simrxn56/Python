@@ -26,7 +26,7 @@ class Library:
     def borrow_book(self):
         book_name = input("What book do you want to borrow? ")
         author_name = input("What is it's author's name? ")
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/book.csv", "r", newline="") as file:
+        with open("book.csv", "r", newline="") as file:
             reader = csv.DictReader(file)
             rows = list(reader)
             fieldnames = reader.fieldnames
@@ -39,12 +39,12 @@ class Library:
                 else:
                     print("Book is not available.")
 
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/book.csv", "w", newline="") as file:
+        with open("book.csv", "w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
 
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/entry.csv", "r", newline="") as file:
+        with open("entry.csv", "r", newline="") as file:
             reader = csv.DictReader(file)
             entries = list(reader)
             fieldnamese = reader.fieldnames
@@ -64,7 +64,7 @@ class Library:
                         "remarks": "books borrowed"
                     }
 
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/entry.csv", "w", newline="") as file:
+        with open("entry.csv", "w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=fieldnamese)
             writer.writeheader()
             writer.writerows(entries + [new_entry])
@@ -73,7 +73,7 @@ class Library:
     def return_book(self):
         book_name = input("What book do you want to return ?")
         author_name = input("What is it's author's name? ")
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/book.csv", "r", newline="") as file:
+        with open("book.csv", "r", newline="") as file:
             reader = csv.DictReader(file)
             rows = list(reader)
             fieldnames = reader.fieldnames
@@ -83,12 +83,12 @@ class Library:
                 if row["status"] == "Borrowed":
                     row["status"] = "Available"
 
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/book.csv", "w", newline="") as file:
+        with open("book.csv", "w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
 
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/entry.csv", "r", newline="") as file:
+        with open("entry.csv", "r", newline="") as file:
             reader = csv.DictReader(file)
             entries = list(reader)
             fieldnamese = reader.fieldnames
@@ -107,7 +107,7 @@ class Library:
                         "remarks": "book returned"
                     }
 
-        with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/entry.csv", "w", newline="") as file:
+        with open("entry.csv", "w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=fieldnamese)
             writer.writeheader()
             writer.writerows(entries + [new_entry])
@@ -118,7 +118,7 @@ class Library:
             book_name = input("Please enter book name: ")
             author_name = input("Please enter author name: ")
 
-            with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/book.csv", "r", newline="") as file:
+            with open("book.csv", "r", newline="") as file:
                 reader = csv.DictReader(file)
                 rows = list(reader)
                 fieldnames = reader.fieldnames
@@ -129,12 +129,12 @@ class Library:
                 else:
                     new_row = {"id": int(row["id"]) + 1,"title": book_name, "author": author_name, "status": "Available"}
 
-            with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/book.csv", "w", newline="") as file:
+            with open("book.csv", "w", newline="") as file:
                 writer = csv.DictWriter(file, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(rows + [new_row])
 
-            with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/entry.csv", "r", newline="") as file:
+            with open("entry.csv", "r", newline="") as file:
                 reader = csv.DictReader(file)
                 entries = list(reader)
                 fieldnamese = reader.fieldnames
@@ -151,7 +151,7 @@ class Library:
                     "remarks": "books added"
                 }
 
-            with open("C:/Users/LENOVO/OneDrive/Desktop/PYTHON/OOP/library/entry.csv", "w", newline="") as file:
+            with open("entry.csv", "w", newline="") as file:
                 writer = csv.DictWriter(file, fieldnames=fieldnamese)
                 writer.writeheader()
                 writer.writerows(entries + [new_entry])
