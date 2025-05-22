@@ -1,0 +1,5 @@
+type,date,member id,member name,book name,book id,remarks
+Borrowing,2025-05-19,1,Simran,The Trial,48,books borrowed
+Returning,2025-05-19,1,Simran,The Trial,48,book returned
+Adding,2025-05-19,1,Simran,Mind,101,books added
+Adding,2025-05-19,1,Simran,Time,102,books added
