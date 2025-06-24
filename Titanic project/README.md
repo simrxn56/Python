@@ -16,5 +16,22 @@ This project explores the Titanic dataset with the goal of uncovering survival p
 [Kaggle Titanic Dataset](https://www.kaggle.com/c/titanic/data)
 
 ## Screenshots
-(Add a few dashboard screenshots here)
+Survival Count
+
+![Image](https://github.com/user-attachments/assets/31de72cf-673d-4330-8fc0-0198ac07a5a6)
+
+
+Survival by Gender
+
+![Image](https://github.com/user-attachments/assets/c8b7eeb3-ca25-4975-9a36-fcddae27f1d5)
+
+
+Age Distribution
+
+![Image](https://github.com/user-attachments/assets/25fd3e7e-7b3f-419f-b1c0-9357be5f92af)
+
+
+Survival by Passenger Class
+
+![Image](https://github.com/user-attachments/assets/fc96dc06-6e76-4058-8bce-1a7632b33311)
 
