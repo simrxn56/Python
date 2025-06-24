@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('C:/Users/LENOVO/OneDrive/Desktop/PYTHON/Titanic project/data/train.csv')
+df = pd.read_csv('../data/train.csv')
 
 df['Age'].fillna(df['Age'].median(), inplace=True)
 df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)
